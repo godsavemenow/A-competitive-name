@@ -9,3 +9,4 @@ return(0);
 }
 //g++ usual.cpp -std=c++11 -Wfatal-errors -o test
 //test / test >> output.txt
+// :)
