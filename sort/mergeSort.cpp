@@ -1,6 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
-#include <vector>
+
 #define loop(a,b) for(int i = a; i < b; i++)
 
 using namespace std;
@@ -47,7 +47,8 @@ void merge(vector<int> &vect, int l, int m, int r){
         vect[k] = rvect[j]; 
         j++; 
         k++; 
-    } 
+    }
+    return;
 }
 
 void mergeSort(vector<int> &vect, int l, int r){ //N^2
@@ -57,22 +58,21 @@ void mergeSort(vector<int> &vect, int l, int r){ //N^2
         mergeSort(vect, m+1 , r);
         merge(vect,l,m,r);
     }
-    
+    return;
 }
 
-
-
-
 int main() {  
-cin.tie(0);
-ios::sync_with_stdio(0);
-vector<int> v = {-2,2,2,-15,3,1,-2,4,-2};
-mergeSort(v, 0,v.size()-1);
-loop(0, v.size()){
+    cin.tie(0);
+    ios::sync_with_stdio(0);
+    vector<int> v = {-2,2,2,-15,3,1,-2,4,-2};
+    
+    mergeSort(v, 0,v.size()-1);
+    
+    loop(0, v.size()){
         cout << " | "<< v[i] ;
     }
 
-return(0);
+    return(0);
 }
 //g++ usual.cpp -std=c++11 -Wfatal-errors -o test
 //test / test >> output.txt
