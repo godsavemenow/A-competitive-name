@@ -8,3 +8,5 @@ class Solution {
         return true
     }
 }
+//https://binarysearch.com/problems/Palindromic-Integer
+//made by me @godsavemenow and @brenolucks
